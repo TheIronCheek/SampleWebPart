@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sample-web-part-client-side-solution",
+    "id": "1fc18b1e-82ff-4bb2-a107-f8c749265157",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": true,
+    "webApiPermissionRequests": [
+      {
+        "resource": "SampleAPI",
+        "scope": "user_impersonation"
+      },
+      { 
+        "resource": "Microsoft Graph", 
+        "scope": "User.Read" 
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/sample-web-part.sppkg"
+  }
+}

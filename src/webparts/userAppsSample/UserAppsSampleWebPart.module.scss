@@ -1,0 +1,184 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.app_content {
+  width: 100%;
+}
+
+.userAppsSample {
+  background-color: rgb(244, 244, 244);
+
+  .container {
+    // max-width: 700px;
+    margin: 0px auto;
+    // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);    
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .row{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;      
+    }
+
+    .List_cell {
+      margin: 5px;
+    }
+  }
+
+  .row::after {
+    content: "";
+    flex: auto;
+  }
+
+  .row {
+    // @include ms-Grid-row;
+    // @include ms-fontColor-white;
+    // background-color: $ms-color-themeDark;
+    // padding: 20px;
+    margin: 0 -2px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 125px);
+    grid-gap: 0.5rem;
+    justify-content: space-between;
+
+    .List_cell {
+      vertical-align: top;
+      width: 125px;
+    }
+
+    .ButtonCard {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      background-color: $ms-color-themePrimary;
+      user-select: text;
+      outline: 0px;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      text-decoration: none;
+    }
+
+    .ButtonCard:hover {
+      background-color: $ms-color-themeDarkAlt
+    }
+
+    .thumbnail {
+      box-sizing: border-box;
+      width: 100%;
+      height: 30px;
+      font-size: 30px;
+      line-height: 30px;
+      margin-top: 12px;
+      margin-right: 0px;
+      margin-bottom: 8px;
+      margin-left: 0px;
+      padding-top: 0px;
+      padding-right: 12px;
+      padding-bottom: 0px;
+      padding-left: 12px;
+      text-align: center;
+      color: $ms-color-white;
+    }
+
+    .ms_icon {
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      font-family: FabricMDL2Icons;
+    }
+
+    .textArea {
+      padding-top: 0px;
+      padding-right: 14px;
+      padding-bottom: 0px;
+      padding-left: 14px;
+      text-align: center;
+      height: 40px;
+      overflow: hidden;
+    }
+
+    .content {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      padding-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .labelTextWrapper {
+      color: $ms-color-white;
+      line-height: 20px;
+      margin-bottom: 2px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .lessText {
+      word-wrap: break-word !important;
+    }
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }    
+  }
+}
